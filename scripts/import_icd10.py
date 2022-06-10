@@ -225,8 +225,8 @@ class Handler(handler.ContentHandler):
     if self.inhibited: return
     self.content += content
     
-if sys.version[0] == "2": xml = open(os.path.join(ICD10_DIR, "icd102010en.xml")).read()
-else:                     xml = open(os.path.join(ICD10_DIR, "icd102010en.xml"), encoding = "latin").read()
+if sys.version[0] == "2": xml = open(os.path.join(ICD10_DIR, "icd102019en.xml")).read()
+else:                     xml = open(os.path.join(ICD10_DIR, "icd102019en.xml"), encoding = "latin").read()
 xml = xml.replace("""<!DOCTYPE ClaML SYSTEM "ClaML.dtd">""", "")
 xml = StringIO(xml)
 parser = sax.make_parser()
